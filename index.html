@@ -2,10 +2,59 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Application download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRF Mobile - APK Download</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #ff3b3f;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    a.download-btn {
+      display: inline-block;
+      background-color: #ff3b3f;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    a.download-btn:hover {
+      background-color: #d63031;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-  <h1>Donwload the brf mobile ledwave mobile application (Android only)</h1>
-  <a href="app-release.apk" download>📥 Click here to download the APK</a>
+  <h1>📱 BRF Mobile - APK Download</h1>
+  <a href="app-release.apk" class="download-btn" download>
+    📥 Click here to download the APK
+  </a>
+  <footer>
+    Android only • Last updated: 2025
+  </footer>
 </body>
 </html>
