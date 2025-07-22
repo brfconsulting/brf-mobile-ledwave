@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BRF Mobile - APK Download</title>
   <style>
     body {
@@ -53,8 +53,22 @@
   <a href="app-release.apk" class="download-btn" download>
     📥 Click here to download the APK
   </a>
-  <footer>
-    Android only • Last updated: 2025
+  <footer id="version">
+    Android only • Loading version...
   </footer>
+
+  <script>
+    fetch('appversion.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('version').textContent =
+          `Android only • Version ${data.version} • Updated: ${data.date || "N/A"}`;
+      })
+      .catch(error => {
+        document.getElementById('version').textContent =
+          'Android only • Version info not available';
+        console.error("Failed to load version:", error);
+      });
+  </script>
 </body>
 </html>
